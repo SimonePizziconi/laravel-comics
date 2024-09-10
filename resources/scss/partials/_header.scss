@@ -1,0 +1,41 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+header{
+    background-color: #fff;
+    height: 120px;
+    @include centerFlex();
+
+    nav{
+        width: 70%;
+        margin: 0 auto;
+        @include centerFlex ();
+        justify-content: space-between;
+
+
+        ul{
+            @include centerFlex ();
+            list-style-type: none;
+            gap: 20px;
+                
+            li{
+                a{
+                    @include centerFlex ();
+                    height: 120px;
+                    align-self: center;
+                }
+
+                .active{
+                    border-bottom: 5px solid $colorprimary;
+                    color: $colorprimary;
+                }
+
+                a:hover{
+                    color: $colorprimary;
+                    border-bottom: 5px solid $colorprimary;
+                }
+            }
+                
+        }
+    }
+}
