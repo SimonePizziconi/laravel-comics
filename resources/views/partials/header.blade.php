@@ -1,7 +1,3 @@
-@php
-    $header_menu = config('header_menu');
-@endphp
-
 <header>
     <nav>
         <a href="#">
@@ -11,7 +7,9 @@
         <ul>
             @foreach ($header_menu as $item)
                 <li>
-                    <a href="#">{{ $item['text'] }}</a>
+                    <a class="{{ Route::currentRouteName() === $item['name'] ? 'active' : '' }}"
+                        href="{{ route($item['name']) }}">{{ $item['text'] }}</a>
+                </li>
                 </li>
             @endforeach
         </ul>

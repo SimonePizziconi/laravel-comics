@@ -1,3 +1,9 @@
+@php
+    $header_menu = config('header_menu');
+@endphp
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

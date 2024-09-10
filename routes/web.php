@@ -17,10 +17,38 @@ Route::get('/', function () {
     return view('comics',);
 })->name('comics');
 
-Route::get('/chi-siamo', function () {
-    return view('about');
-})->name('about');
+Route::get('/characters', function () {
+    return view('characters');
+})->name('characters');
 
-Route::get('/contatti', function () {
-    return view('contacts');
-})->name('contacts');
+Route::get('/film', function () {
+    return view('movies');
+})->name('movies');
+
+Route::get('/tv', function () {
+    return view('tv');
+})->name('tv');
+
+Route::get('/giochi', function () {
+    return view('games');
+})->name('games');
+
+Route::get('/collezionabili', function () {
+    return view('collectibles');
+})->name('collectibles');
+
+Route::get('/video', function () {
+    return view('video');
+})->name('video');
+
+Route::get('/fans', function () {
+    return view('fans');
+})->name('fans');
+
+Route::get('/novità', function () {
+    return view('news');
+})->name('news');
+
+Route::get('/negozio', function () {
+    return view('shop');
+})->name('shop');
